@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>text converted</title>
+    <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+    <div id="container">
+    <h1>Text to speech</h1>
+    <textarea id="text"></textarea>
+    <button onclick="talk()">Text to speak</button>
+    </div>
+
+<script>
+
+
+function talk() {
+            var text = document.getElementById('text').value;
+            var speech = new SpeechSynthesisUtterance();
+            speech.text = text;
+            speech.rate = 1;
+            speech.volume = 100; 
+            speech.pitch = 1;  
+            
+            window.speechSynthesis.speak(speech);
+}
+
+</script>
+
+</body>
+</html>
